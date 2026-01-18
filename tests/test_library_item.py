@@ -50,6 +50,30 @@ class TestGenre(unittest.TestCase):
             LibraryItem(1, "Steve Jobs", "Walter Isaacson", "?", True)
     
 
+    def setUp(self):
+        self.library_items = LibraryItem(1, "Steven Jobs", "Walter Isaacson", Genre.NON_FICTION, True)
+
+    def test_title_accessor(self):
+# Arrange complete in setup, Act and Assert
+        self.assertEqual("Steven Jobs", self.library_items.title)
+
+    def test_author_accessor(self):
+# Arrange complete in setup, Act and Assert
+        self.assertEqual("Walter Isaacson", self.library_items.author)    
+
+    def test_genre_accessor(self):
+# Arrange complete in setup, Act and Assert
+        self.assertEqual(Genre.NON_FICTION, self.library_items.genre)
+
+    def test_item_id_accessor(self):
+# Arrange complete in setup, Act and Assert
+        self.assertEqual(1, self.library_items.item_id)
+
+    def test_is_borrowed_accessor(self):
+# Arrange complete in setup, Act and Assert
+        self.assertEqual(True, self.library_items.is_borrowed)
+    
+
 
 
 
