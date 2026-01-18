@@ -23,6 +23,32 @@ class TestGenre(unittest.TestCase):
         self.assertEqual(Genre.NON_FICTION, library_items._LibraryItem__genre)
         self.assertEqual(1, library_items._LibraryItem__item_id)
         self.assertEqual(True, library_items._LibraryItem__is_borrowed)
+    
+    def test_init_blank_title_raises_exception(self):
+# Arrange & Act and Assert
+        with self.assertRaises(ValueError):
+            LibraryItem(1,"", "Walter Isaacson", Genre.NON_FICTION, True)
+
+    def test_init_blank_author_raises_exception(self):
+# Arrange & Act and Assert
+        with self.assertRaises(ValueError):
+            LibraryItem(1, "Steve Jobs", "", Genre.NON_FICTION, True)
+
+    def test_init_invalid_genre_raises_exception(self):
+# Arrange & Act and Assert
+        with self.assertRaises(ValueError):
+            LibraryItem(1, "Steve Jobs", "Walter Isaacson", "?", True)
+    
+    def test_init_invalid_item_id_raise_exception(self):
+# Arrange & Act and Assert
+        with self.assertRaises(ValueError):
+            LibraryItem(1, "Steve Jobs", "Walter Isaacson", "?", True)
+    
+    def test_init_invalid_is_borrowed_raise_exception(self):
+# Arrange & Act and Assert    
+        with self.assertRaises(ValueError):
+            LibraryItem(1, "Steve Jobs", "Walter Isaacson", "?", True)
+    
 
 
 
