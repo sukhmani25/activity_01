@@ -13,6 +13,7 @@ class Genre(Enum):
     To use:  Genre.GENRE_NAME.  
     Example: Genre.NON_FICTION
     """
+
     FICTION = 0
     NON_FICTION = 1
     FANTASY = 2
