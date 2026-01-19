@@ -1,4 +1,6 @@
-"""A class to manage LibraryItem objects."""
+""""
+Description: A class to manage LibraryItem objects.
+"""
 
 __author__ = "Sukhmani"
 __version__ = "1.0.0"
