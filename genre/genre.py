@@ -1,6 +1,6 @@
 """An enumeration containing valid Genres."""
 
-__author__ = "ACE Faculty"
+__author__ = "COMP-2327 Faculty"
 __version__ = "1.0.0"
 __credits__ = ""
 
